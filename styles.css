@@ -1,0 +1,522 @@
+*{
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(252, 243, 251) !important;
+}
+
+
+
+a{
+    text-decoration: none !important;
+    /* color: white !important; */
+}
+
+ul{
+    list-style: none;
+}
+
+
+.warning{
+    color: red;
+    display: none;
+}
+
+/* ==================== navigation bar =========== */
+
+.nav{
+    width: 100% !important;
+    height: 4rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* box-shadow: 0 4px 4px rgb(126, 125, 125); */
+}
+
+.nav__container{
+    display: flex;
+    width: 98%;
+    height: 4rem;
+    justify-content: space-between;
+    /* margin: 0 auto !important; */
+    align-items: center;
+}
+
+
+/* ================ Direct Children of Nav Container ======= */
+.nav__toggler{
+    /* background-color: aqua; */
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2.5rem;
+    display: none;
+}
+
+.mobile__navMenu{
+    width: 80vw !important;
+    height: 99vh;
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    z-index: 100 !important;
+    display: none;
+    
+}
+.logo__container{
+    height: 3rem;
+    flex-grow: 1;
+    /* background-color: red; */
+    margin-left: 5px;
+    text-align: center;
+}
+
+
+.search__container{
+    flex-grow: 3;
+    /* background-color: yellow; */
+    height: 3rem;
+    margin: 0 5px !important;
+}
+.nav__options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    /* background-color: green; */
+    height: 3rem;
+}
+   /* ===========Direct Children of Logo Container======= */
+    .logo{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    /* ================ Direct Children of search Container========== */
+    .inputPlusbtn{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* ============Children of the inputButton container ===== */
+    .search__input{
+        border-radius: 10px !important;
+        border: none !important;
+        outline: none !important;
+        height: 60% !important;
+        flex-grow: 3;
+        padding: 15px 20px !important;
+        background-color: rgb(238, 237, 237) !important;
+        box-shadow: none !important;
+    }
+
+    .search__btn{
+        background-color: orangered;
+        padding: 3px 5px !important;
+        color: #fff !important;
+        margin-left: 5px !important;
+        border-radius: 10px;
+    }
+
+    .nav__options a{
+        color: orangered !important;
+        font-size: 1.5rem;
+    }
+
+    .help{
+        flex-grow: 6;
+        text-align: center;
+    }
+
+    .cart, .user{
+        flex-grow: 1;
+    }
+
+    .user:hover, .user__submenu{
+        display: block;
+    }
+
+    .user__submenu{
+        background-color: rgb(107, 106, 106);
+        width: 7rem;
+        position: absolute;
+        top: 4rem;
+        right: 5px;
+        display: none;
+    }
+
+
+    .user__submenu ul{
+        padding: 5px;
+        height: 8rem;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .user__submenu ul li:hover{
+        background-color: orangered;
+    }
+
+
+
+    /* ================Direct Children of options Container========== */
+
+
+
+/* =============END OF NAV ========== */
+
+/* ==================CONTENT WRAPPER LAYOUTS ============ */
+
+.content__wrapper{
+    width: 90%;
+    height: 90vh;
+    margin: 0 auto !important;
+}
+
+.row__one{
+    background-color: rgb(221, 226, 212);
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.left__sidebar__component{
+    width: 20%;
+    height: 99%;
+    background-color: white;
+}
+
+.middle__component{
+    width: 60% !important;
+    height: 99% !important;
+    align-content: center !important;
+}
+
+.right__sidebar__component{
+    width: 20%;
+    height: 99%;
+    background-color: white;
+}
+
+.row2{
+    background-color: rgb(255, 255, 255);
+    height: 30%;
+    margin-top: 20px;
+}
+
+
+/* ================ CONTENT WRAPPER INNER CONTENTS ========= */
+/* left side bar */
+.cats__container{
+    background-color: rgb(199, 192, 156);
+    height: max-content;
+}
+
+.cats__label{
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 6px !important;
+    margin-bottom: 5px !important;
+}
+
+.cats__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem !important;
+    padding-left: 4px !important;
+}
+.cats__list li a{
+    color: black !important;
+    font-weight: 600 !important;
+    text-align: center;
+
+}
+
+.cats__list li{
+    padding: 10px 5px !important;
+    border-radius: 10px;
+    transition: .8s ease;
+}
+
+.cats__list li:hover{
+    background-color: rgb(253, 108, 55);
+}
+
+
+.carouselExampleControls{
+    /* border: 10x solid yellow !important; */
+    width: 60% !important;
+    height: max-content  !important;
+}
+
+.carousel-inner{
+    width: 90%;
+    height: 100%;
+    align-content: center;
+}
+
+.carousel-item{
+    width: 90%;
+    height: 90%;
+    align-content: center;
+}
+
+.carousel-item img{
+    object-fit: contain;
+    height: 410px;
+    width: 600px;
+    align-self: center;
+}
+
+
+/* right side bar */
+
+.user__greetings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px !important;
+}
+
+.user__greetings span, .user__greetings p{
+    line-height: 20px !important;
+    font-weight: 700;
+}
+
+.user__greetings span{
+    font-size: 17px;
+}
+
+
+
+.greetings__buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px !important;
+}
+
+.login__btn{
+    background-color: rgb(204, 211, 192);
+    padding: 3px 5px !important;
+    border-radius: 10px;
+    color: black !important;
+    font-weight: 600;
+}
+
+.join__btn{
+    background-color: orangered;
+    padding: 3px 7px !important;
+    border-radius: 10px;
+    color: white !important;
+    font-weight: 600;
+}
+
+.flash__details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px !important;
+    margin-bottom: 3rem !important;
+}
+.flash__details p:nth-of-type(1){
+    color: orangered;
+    font-weight: 800;
+    text-align: right;
+    padding-right: 6px !important;
+}
+
+.flash__details p:nth-of-type(2){
+    padding-left: 10px !important;
+    font-weight: 800;
+}
+
+.dealings{
+    display: flex;
+}
+
+.item1 img, .item2 img{
+    object-fit: scale-down;
+    width: 110px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+}
+
+.discount__rate{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+}
+
+.rate{
+    color: orangered;
+}
+
+.bottom__component{
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    background-color: #fff;
+    align-items: center;
+    margin-top: 15px !important;
+    flex-wrap: wrap;
+    padding: 10px !important;
+}
+
+.cat__item1{
+    display: flex;
+    flex-basis: fill;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    height: max-content;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+}
+
+.cat__item1 img{
+    object-fit: scale-down;
+    width: 150px;
+}
+
+
+.footer{
+    width: 90%;
+    height: 4rem;
+    background-color: rgb(250, 248, 248);
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -3px 4px rgb(250, 229, 112);
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+@media screen and (max-width:700px) {
+    .nav__toggler{
+        display: block;
+        cursor: pointer;
+    }
+    .content__wrapper{
+        display: block;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .middle__component{
+        width: 100vw !important;
+    }
+
+    .carousel{
+        min-width: 450px;
+        max-width:  100%;
+        height: 700px;
+        max-height: 100%;
+    }
+
+    .logo__container{
+        /* background-color: red; */
+        flex-grow: 2;
+    }
+
+    .logo{
+        font-size: 2rem;
+        padding-bottom: 1rem !important;
+        font-weight: 800;
+    }
+
+    .inputPlusbtn{
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .search__input{
+        display: none !important;
+    }
+
+    .nav__options{
+        /* background-color: green; */
+        flex-grow: 12;
+    }
+
+    .mobile__navMenu{
+        width: 80vw !important;
+        height: 99vh;
+        overflow-y: scroll;
+        background-color: #fff;
+        position: absolute;
+        left: -100%;
+        z-index: 100 !important;
+        display: block;
+        transition: .2s ease-out;
+        box-shadow: 3px 0 4px rgb(136, 136, 136);
+    }
+    
+    .carousel .carousel-control-next-icon{
+        z-index: 10;
+    }
+
+    .close__button{
+        position: absolute;
+        right: 0;
+        padding: 10px !important;
+        background-color: orangered;
+        border-radius: 50%;
+        margin:1rem !important;
+    }
+
+    .close__button a{
+        color: #fff !important;
+        font-weight: 700;
+    }
+
+    .close__button:hover{
+        outline: 1px solid orange;
+        background-color: white;
+        color: black;
+    }
+
+    .close__button a:hover{
+        color: black !important;
+    }
+
+
+    /* show mobile menu */
+    .show__mobileMenu{
+       top: 0;
+        left: 0;
+    }
+
+    .bottom__component{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    
+    .cat__item1{
+        flex-basis: 200px;
+        margin: 5px !important;
+    }
+
+
+}
